@@ -1,0 +1,15 @@
+# Ignore backend build files
+backend/bin/
+backend/obj/
+backend/*.user
+backend/*.suo
+backend/.vs/
+
+# Ignore frontend build files
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+
+# Common
+*.log
+.env
