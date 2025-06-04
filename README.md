@@ -16,27 +16,27 @@ The application uses a .NET 8 backend with ASP.NET Core Identity for user and ro
 
 #### Admin
 
-- Create, update, delete, and assign tasks  
-- View and manage all tasks from a central dashboard  
-- Add comments to any task  
-- Monitor overall task progress across users  
+- Create, update, delete, and assign tasks
+- View and manage all tasks from a central dashboard
+- Add comments to any task
+- Monitor overall task progress across users
 
 #### User
 
-- Register and log in  
-- View tasks assigned to them  
-- Update task status (In Progress, Completed, Blocked)  
+- Register and log in
+- View tasks assigned to them
+- Update task status (In Progress, Completed, Blocked)
 - Comment on tasks assigned only to them
-- Keep personal notes  
+- Keep personal notes
 
 ---
 
 ### Technical Stack
 
-- **Backend**: ASP.NET Core (.NET 8), Entity Framework, JWT Authentication  
-- **Frontend**: React, Material-UI  
-- **Database**: SQL Server  
-- **Dev Tools**: Visual Studio 2022, VS Code, Swagger  
+- **Backend**: ASP.NET Core (.NET 8), Entity Framework, JWT Authentication
+- **Frontend**: React, Material-UI
+- **Database**: SQL Server
+- **Dev Tools**: Visual Studio 2022, VS Code, Swagger
 
 ---
 
@@ -44,21 +44,23 @@ The application uses a .NET 8 backend with ASP.NET Core Identity for user and ro
 
 #### Prerequisites
 
-- .NET 8 SDK  
-- SQL Server  
-- Node.js and npm  
+- .NET 8 SDK
+- SQL Server
+- Node.js and npm
 
 #### Setup Instructions
 
 1. **Clone the repository**
 
 2. **Backend**
-   - Open the backend project in Visual Studio 2022  
-   - Update the SQL Server connection string in `appsettings.json`  
-   - Apply migrations and run the API project  
+
+   - Open the backend project in Visual Studio 2022
+   - Update the SQL Server connection string in `appsettings.json`
+   - Apply migrations and run the API project
 
 3. **Frontend**
-   - Navigate to the frontend directory  
+
+   - Navigate to the frontend directory
    - Install dependencies and start the development server
 
    ```bash
@@ -70,8 +72,8 @@ The application uses a .NET 8 backend with ASP.NET Core Identity for user and ro
 
 ### Authentication and Authorization
 
-- Registration is public and assigns the `User` role by default.  
-- On login, a JWT token is issued with claims like `UserId` and `Role`.  
+- Registration is public and assigns the `User` role by default.
+- On login, a JWT token is issued with claims like `UserId` and `Role`.
 - Access is controlled using attributes such as `[Authorize]` and `[Authorize(Roles = "Admin")]`.
 
 When using the frontend, the JWT is automatically stored in the browser’s local storage. You can also manually use the token in tools like Swagger for testing.
@@ -82,16 +84,19 @@ When using the frontend, the JWT is automatically stored in the browser’s loca
 
 #### Admin Views
 
-- **Task Management Page**: Full control over all tasks, including assigning and commenting.  
+- **Task Management Page**: Full control over all tasks, including assigning and commenting.
+  ![](./Frontend/TaskManagement/public/TaskMan_Page.png)
 - **Dashboard**: Overview of all user activity and task statuses.  
+  ![](./Frontend/TaskManagement/public/Dashboard.png)
 
 #### User Views
 
 - **My Tasks Page**: View tasks, update their status, and comment.  
+  ![](./Frontend/TaskManagement/public/UserTasks.png)
 - **Notes Page**: Add, update, and delete personal notes.  
+  ![](./Frontend/TaskManagement/public/Notes.png)
 
 All users see a profile avatar (generated from the first letter of their name) with a dropdown menu to view their profile or log out.
-
 
 ---
 
@@ -99,8 +104,7 @@ All users see a profile avatar (generated from the first letter of their name) w
 
 This project follows best practices, including:
 
-- Dependency injection throughout the backend  
-- Clean service-layer structure  
-- Use of DTOs to manage data transfer  
-- A RESTful API design  
-
+- Dependency injection throughout the backend
+- Clean service-layer structure
+- Use of DTOs to manage data transfer
+- A RESTful API design
