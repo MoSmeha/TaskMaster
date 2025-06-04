@@ -52,10 +52,6 @@ The application uses a .NET 8 backend with ASP.NET Core Identity for user and ro
 
 1. **Clone the repository**
 
-   ```bash
-   git clone https://your-repo-url.git
-   ```
-
 2. **Backend**
    - Open the backend project in Visual Studio 2022  
    - Update the SQL Server connection string in `appsettings.json`  
